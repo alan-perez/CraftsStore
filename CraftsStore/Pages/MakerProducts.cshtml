@@ -1,0 +1,30 @@
+﻿@page "/MakerProducts/{Maker}"
+@model CraftsStore.Web.Pages.MakerProductsModel
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Url</th>
+            <th scope="col">Image</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Title</td>
+            <td>@product.Description</td>
+            <td><a href="@product.Url" target="_blank">Makers Url </a></td>
+            <td><img class="card-img-top" src =" @product.Image" alt="img" /> </td>
+        </tr>
+        }
+        </tbody>
+</table>
+

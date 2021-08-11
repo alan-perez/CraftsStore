@@ -1,0 +1,10 @@
+﻿@page "/details/{Id}"
+@model CraftsStore.Web.Pages.DetailsModel
+@{
+}
+
+<h3>@Model.Product.Title</h3>
+<img src="@Model.Product.Image" alt="Alternate Text" />
+<p>@Model.Product.Description</p>
+<p>Maker: @Model.Product.Maker</p>
+<p>Url: <a href="@Model.Product.Url"></a></p>
